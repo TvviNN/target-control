@@ -226,6 +226,9 @@ class Ui_VelocityWindow(object):
         self.label_select_gas.setFont(font)
         self.label_select_gas.setObjectName("label_select_gas")
         self.grid_settings.addWidget(self.label_select_gas, 0, 0, 1, 1)
+        self.button_calculate = QtWidgets.QPushButton(VelocityWindow)
+        self.button_calculate.setObjectName("button_calculate")
+        self.grid_settings.addWidget(self.button_calculate, 4, 1, 1, 1)
         self.hbox_VelocityWindow.addLayout(self.grid_settings)
         self.mpl_widget = MatplotlibWidget(VelocityWindow)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
@@ -270,5 +273,6 @@ class Ui_VelocityWindow(object):
         self.label_input_p_high.setText(_translate("VelocityWindow", "bar"))
         self.select_data_type.setTabText(self.select_data_type.indexOf(self.tab_isothermal), _translate("VelocityWindow", "Isothermal"))
         self.label_select_gas.setText(_translate("VelocityWindow", "Select gas species:"))
+        self.button_calculate.setText(_translate("VelocityWindow", "Calculate !"))
 
 from matplotlibwidget import MatplotlibWidget

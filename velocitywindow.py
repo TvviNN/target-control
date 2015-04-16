@@ -29,7 +29,8 @@ class VelocityWindow(QtWidgets.QWidget, Ui_VelocityWindow):
 
     def connect_signals(self):
         self.combo_box_select_gas.currentTextChanged.connect(self.set_default_gas_values)
-        self.input_t_low.textChanged.connect(self.plot_velocity)
+        # self.input_t_low.textChanged.connect(self.plot_velocity)
+        self.button_calculate.clicked.connect(self.plot_velocity)
 
     def set_default_gas_values(self):
         self.selected_gas_species = self.combo_box_decoding[self.combo_box_select_gas.currentText()]
